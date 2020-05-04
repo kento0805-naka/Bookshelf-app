@@ -2,7 +2,7 @@
 .log-form {
   margin: 100px  auto;
   width: 40%;
-  height: 400px;
+  height: 450px;
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid;
@@ -18,13 +18,17 @@
   }
   
   .form-container {
-    margin-top: 40px;
+    margin-top: 60px;
     padding-left: 15px;
     padding-right: 15px;
     height: 250px;
     
     .field {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
+  }
+  
+  .shared-links {
+    text-align: center;
   }
 }
