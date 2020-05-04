@@ -1,0 +1,5 @@
+<div class='top-wrapper'>
+  <% unless user_signed_in? %>
+  <%= link_to 'ログインする', new_user_session_path, class: 'btn btn-primary login-btn'%>
+  <% end %>
+</div>

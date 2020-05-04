@@ -14,9 +14,10 @@
   </head>
   
   <body>
-    <%= render partial: 'layouts/navbar' %>
-    <div class='container'>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+    
+    <div class='container-fluid'>
+      <%= yield %>
     </div>
   </body>
 </html>
