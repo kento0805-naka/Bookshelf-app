@@ -1,6 +1,10 @@
 <h3>プロフィール</h3>
 <div>
-  <i class="far fa-user-circle"></i>
+  <% if @user.profile_img? %>
+      <%= image_tag @user.profile_img.thumb.url %>
+   <% else %>
+      <i class="far fa-user-circle "></i>
+   <% end %>
 </div>
 
 <div>
