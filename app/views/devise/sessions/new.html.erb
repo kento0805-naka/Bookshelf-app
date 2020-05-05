@@ -3,12 +3,11 @@
   <div class='form-group form-container'>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field row">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'メールアドレス' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control fa', placeholder: "\uf0e0 メールアドレス" %>
       </div>
     
       <div class="field row ">
-        
-        <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', placeholder: 'パスワード' %>
+        <%= f.password_field :password, autocomplete: "current-password", class: 'form-control fa', placeholder: "\uf023 パスワード" %>
       </div>
     
       <% if devise_mapping.rememberable? %>
