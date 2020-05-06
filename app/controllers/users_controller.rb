@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       flash[:success] = 'プロフィールを更新しました。'
       redirect_to user_path
     else
+      flash[:danger] = 'プロフィールを更新できませんでした'
       redirect_to edit_user_path
     end
   end
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:profile_img)
+    params.require(:user).permit(:profile_img, :description)
   end
   
   

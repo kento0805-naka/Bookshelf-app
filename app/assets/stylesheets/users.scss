@@ -1,17 +1,73 @@
 
-.user_info_img {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
+.user_info {
+  margin: 20px auto;
   
-  & img {
-    width: 100%;
-    height: 100%;
+  .info_left {
+    padding: 30px;
+    .user_info_img {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      
+      & img {
+        width: 100%;
+        height: 100%;
+        
+      }
+    }
+  }
+  
+  .info_right {
+    padding-right: 30px;
+    padding-left: 0;
+    padding-top: 30px;
+
+    .info_top_wrapper {
+      padding-bottom: 15px;
+      .user_info_name {
+        font-size: 25px;
+      }
+      .user_info_following_btn {
+        margin-left: 15px;
+        margin-top: 6px;
+        
+        .follow_btn {
+          border-radius: 20px;
+          font-size: 8px;
+          font-weight: bold;
+          width: 100px;
+        }
+        
+        .profile_btn {
+          
+        }
+      }
+    }
     
+    .info_middle_wrapper {
+      padding-bottom: 15px;
+      
+      .user_info_count_follow {
+        
+      }
+      .user_info_count_follower {
+        margin-left: 10px;
+      }
+    }
+    .user_info_self_description {
+      
+    }
   }
 }
+
+
+
+
+
+
+
 
 .fa-user-circle {
   font-size: 150px;

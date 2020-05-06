@@ -1,21 +1,44 @@
-<h3>プロフィール</h3>
-<div class='user_info_img'>
-  <% if @user.profile_img? %>
-      <%= image_tag @user.profile_img.thumb.url %>
-   <% else %>
-      <i class="far fa-user-circle "></i>
-   <% end %>
+<div class='container'>
+  <div class="user_info d-sm-flex row">
+    <div class="info_left col-4">
+      <div class='user_info_img'>
+        <% if @user.profile_img? %>
+          <%= image_tag @user.profile_img.thumb.url %>
+        <% else %>
+          <i class="far fa-user-circle "></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="info_right col-8">
+      <div class='info_top_wrapper d-sm-flex'>
+        <div class='user_info_name'>
+          <%= @user.name %>
+        </div>
+        <div class='user_info_following_btn'>
+          <% if true %>
+            <%= link_to 'プロフィールの編集', edit_user_path, class: 'btn btn-outline-secondary btn-sm profile_btn' %> 
+          <% else %>
+            
+            <!--自分のプロフィールでは編集ボタンの表示-->
+            <button class='btn btn-small btn-outline-info follow_btn'>フォローする</buttom>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="info_middle_wrapper d-sm-flex">
+        <div class="user_info_count_follow">1 フォロー</div>
+        <div class="user_info_count_follower">1 フォワー</div>
+      </div>
+      
+      
+      <div　class='user_info_self_description'>
+        <p>自己紹介</p>
+        <div></div>
+      </div>
+    </div>
+    
+  </div>
+
 </div>
 
-<div>
-  <%= @user.name %>
-</div>
-<div>
-  <button>フォローする</buttom>
-</div>
-<%= link_to 'プロフィールの編集', edit_user_path %>
-<h6>フォロー</h4>
-<h6>フォロワー</h4>
-<div>
-  自己紹介
-</div>
+<hr>
