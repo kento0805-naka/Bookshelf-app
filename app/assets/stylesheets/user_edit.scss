@@ -1,0 +1,39 @@
+
+
+.edit_user {
+  text-align: center;
+  
+  & h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .edit_image_container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    & img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+  
+  .edit_btn_container {
+    
+    .btn {
+      
+    }
+  }
+  
+  .textarea {
+   
+   .text_form {
+     margin: 0 auto;
+     width: 400px;
+     height: 200px;
+   }
+  }
+} 
