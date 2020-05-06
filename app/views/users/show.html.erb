@@ -1,5 +1,5 @@
 <h3>プロフィール</h3>
-<div>
+<div class='user_info_img'>
   <% if @user.profile_img? %>
       <%= image_tag @user.profile_img.thumb.url %>
    <% else %>
@@ -13,6 +13,7 @@
 <div>
   <button>フォローする</buttom>
 </div>
+<%= link_to 'プロフィールの編集', edit_user_path %>
 <h6>フォロー</h4>
 <h6>フォロワー</h4>
 <div>
