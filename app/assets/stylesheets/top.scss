@@ -1,4 +1,7 @@
-
+.flash {
+  position: absolute;
+  width: 100%;
+}
 
 body {
   background-color:#eeeeee;
@@ -7,6 +10,7 @@ body {
   padding-right: 0;
   padding-left: 0;
   width: 100%;
+  position: relative;
 }
 
 .top-wrapper {
