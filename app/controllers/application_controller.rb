@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
     @user
   end
   
+  def counts(user)
+    @count_followings = user.followings.count 
+    @count_followers = user.followers.count
+  end
+  
   protected
   
   def configure_permitted_parameters

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   
+  def index
+    @users = User.all
+  end
+  
   def show
     @user = User.find_by(id: params[:id])
   end
@@ -17,6 +21,18 @@ class UsersController < ApplicationController
       flash[:danger] = 'プロフィールを更新できませんでした'
       redirect_to edit_user_path
     end
+  end
+  
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.followings
+    counts(@user)
+  end
+  
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.followers
+    counts(@user)
   end
   
   private
