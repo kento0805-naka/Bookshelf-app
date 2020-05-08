@@ -25,8 +25,8 @@
       </div>
       
       <div class="info_middle_wrapper d-sm-flex">
-        <div class="user_info_count_follow">1 フォロー</div>
-        <div class="user_info_count_follower">1 フォワー</div>
+        <div class="user_info_count_follow"><%= current_user.followings.count %> フォロー</div>
+        <div class="user_info_count_follower"><%= current_user.followers.count %> フォワー</div>
       </div>
       
       
