@@ -6,8 +6,11 @@ class BooksController < ApplicationController
   end
 
   def search
-    if params[:keyword]
+    if params[:keyword].present?
      @books = RakutenWebService::Books::Book.search(title: params[:keyword])
+    else
+      flash[:danger] = 'キーワードを入力してください'
+      
     end
   end
 end
