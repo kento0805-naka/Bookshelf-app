@@ -1,15 +1,17 @@
-<h1>Rakubooks</h1>
-<div class='content'>
-  <div id="search-box">
-    <%= form_with(url: search_books_path, method: :get, local: true) do |f|%>
-      <div class='form-group'>
-      <%= f.text_field :keyword, class: 'form-controll' %>
-      <%= f.submit '検索', class: 'form-controll btn btn-primary' %>
-      </div>
-    <% end %>
-  </div>
-  <h2>検索結果</h2>
-  <div id='book_list'>
-     <%= render partial: 'book_list' %>
+<div class="search">
+  <div class='search_content'>
+    <h1>Rakubooks</h1>
+    <div class="search-box">
+      <%= form_with(url: search_books_path, method: :get, local: true) do |f|%>
+        <div class='form-group'>
+        <%= f.text_field :keyword, class: 'form-controll' %>
+        <%= f.submit '検索', class: 'form-controll btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+    <h2>検索結果</h2>
+    <div id='book_list'>
+       <%= render partial: 'book_list' %>
+    </div>
   </div>
 </div>
