@@ -70,3 +70,4 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'rakuten_web_service'
 gem 'kaminari'
+gem 'pry-byebug', group: :development

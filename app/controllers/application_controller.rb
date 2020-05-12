@@ -13,6 +13,20 @@ class ApplicationController < ActionController::Base
     @count_followers = user.followers.count
   end
   
+  def read(result)
+    title = result['title']
+    author = result['author']
+    image_url = result['medium_image_url']
+    item_url = result['item_url']
+    
+    {
+      title: title,
+      author: author,
+      image_url: image_url,
+      item_url: item_url
+    }
+  end
+  
   protected
   
   def configure_permitted_parameters

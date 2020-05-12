@@ -9,10 +9,10 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :books, only: [:index, :show] do
-    collection do
-      get :search
-    end
+  resources :books, only: [:index, :show, :create, :new] do
+    # collection do
+    #   get :search
+    # end
   end
   resources :relationships, only: [:create, :destroy]
 end

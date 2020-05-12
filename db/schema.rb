@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_10_101415) do
+ActiveRecord::Schema.define(version: 2020_05_12_081230) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.string "author"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_url"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -28,6 +29,16 @@ ActiveRecord::Schema.define(version: 2020_05_10_101415) do
     t.index ["follow_id"], name: "index_relationships_on_follow_id"
     t.index ["user_id", "follow_id"], name: "index_relationships_on_user_id_and_follow_id", unique: true
     t.index ["user_id"], name: "index_relationships_on_user_id"
+  end
+
+  create_table "userbooks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "book_id"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_userbooks_on_book_id"
+    t.index ["user_id"], name: "index_userbooks_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -47,4 +58,6 @@ ActiveRecord::Schema.define(version: 2020_05_10_101415) do
 
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
+  add_foreign_key "userbooks", "books"
+  add_foreign_key "userbooks", "users"
 end
