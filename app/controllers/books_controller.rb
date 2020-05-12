@@ -24,6 +24,27 @@ class BooksController < ApplicationController
   end
   
   def create
+    @title = params[:book][:title]
+    @author = params[:book][:author]
+    @image_url = params[:book][:image_url]
+    @item_url = params[:book][:item_url]
+    
+    book = Book.find_or_initialize_by({
+      title: @title,
+      author: @author,
+      image_url: @image_url,
+      item_url: @item_url
+    })
+    
+    unless book.persisted?
+      book.save
+      current_user.register_book(book)
+      redirect_to root_path
+    else
+      flash[:danger] = "本棚に追加できませんでした"
+    end
+    
+    
     
   end
   
