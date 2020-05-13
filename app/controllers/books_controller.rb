@@ -36,12 +36,16 @@ class BooksController < ApplicationController
       item_url: @item_url
     })
     
-    unless book.persisted?
+  
+    
+    if book.persisted?
+      book_data = Book.find_by(item_url: book.item_url)
+      current_user.register_book(book_data)
+      redirect_to user_path(current_user.id)
+    else
       book.save
       current_user.register_book(book)
-      redirect_to root_path
-    else
-      flash[:danger] = "本棚に追加できませんでした"
+      redirect_to user_path(current_user.id)
     end
     
     
