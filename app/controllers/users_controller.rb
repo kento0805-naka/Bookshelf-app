@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     counts(@user)
-    # @get_all_books = User.userbooks.all(status: 1)
+    @all_books = @user.books.all
   end
   
   def edit

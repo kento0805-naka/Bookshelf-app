@@ -1,0 +1,10 @@
+<div class="book_container">
+  <%= all_books.each do |book| %>
+    <div class='book_item list_item'>
+      <figure class='book_image book_item_image'>
+        <%= image_tag book.image_url%>
+      </figure>
+    </div>
+  <% end %>
+</div>
+
