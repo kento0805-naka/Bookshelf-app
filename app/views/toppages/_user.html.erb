@@ -1,0 +1,13 @@
+<div class='user_container row'>
+  <% users.each do |user| %>
+    
+      <div class='col-sm-3 user_box'>
+        <div class='user_info_img'>
+          <%= render 'users/user_image', user: user%>
+        </div>
+        <h5><%= user.name %></h5>
+      </div>
+      
+   
+  <% end %>
+</div>

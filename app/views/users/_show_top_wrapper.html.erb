@@ -2,11 +2,7 @@
   <div class="user_info d-sm-flex row">
     <div class="info_left col-4">
       <div class='user_info_img'>
-        <% if @user.profile_img? %>
-          <%= image_tag @user.profile_img.thumb.url %>
-        <% else %>
-          <i class="far fa-user-circle "></i>
-        <% end %>
+        <%= render 'user_image', user: @user%>
       </div>
     </div>
     <div class="info_right col-8">

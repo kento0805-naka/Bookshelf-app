@@ -40,3 +40,12 @@ body {
       opacity: .9;
     }
 }
+
+.new_user_container {
+  margin-top: 100px;
+  
+  & h4 {
+    text-align: center;
+    
+  }
+}

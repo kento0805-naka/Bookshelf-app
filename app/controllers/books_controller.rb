@@ -19,7 +19,7 @@ class BooksController < ApplicationController
       end
       
     else
-      flash[:danger] = 'キーワードを入力してください'
+      flash[:notice] = 'キーワードを入力してください'
     end
   end
   

@@ -8,16 +8,12 @@
     .user_info_img {
       width: 150px;
       height: 150px;
-      margin: 0 auto;
-      border-radius: 50%;
-      overflow: hidden;
       
       & img {
-        width: 100%;
-        height: 100%;
         
       }
     }
+    
   }
   
   .info_right {
@@ -78,3 +74,16 @@
 .fa-user-circle {
   font-size: 150px;
 }
+
+.user_info_img {
+      
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      
+      & img {
+        width: 100%;
+        height: 100%;
+        
+      }
+    }
