@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'rankings/index'
   root to: 'toppages#index'
   devise_for :users
   resources :users do
@@ -15,4 +16,5 @@ Rails.application.routes.draw do
     # end
   end
   resources :relationships, only: [:create, :destroy]
+  resources :rankings, only: [:index]
 end
