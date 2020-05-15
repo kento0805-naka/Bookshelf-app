@@ -9,9 +9,9 @@
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0,0,0,.4);
   margin: 20px 30px;
-  
+  overflow: hidden;
   width: 200px;
-  height: 280px;
+  height: 260px;
   
   
   .book_image {
@@ -20,7 +20,7 @@
       width: 100%;
       height: 100%;
       border-radius: 10px;
-      overflow: hidden;
+      
     }
   }
 }

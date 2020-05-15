@@ -1,0 +1,19 @@
+
+
+.book_info_img {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  & img {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  & h5 {
+    margin-top: 20px;
+  }
+}
