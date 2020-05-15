@@ -1,16 +1,26 @@
   <% @books.each do |book| %>
-    <div class="list">
+    <div class="list row">
         <% if book.image_url %>
-          <%= link_to (image_tag(book.image_url, style: "width: 70px;height: 100px;display: inline-block;")), book.item_url %>
+          <%= link_to (image_tag(book.image_url)), book.item_url, class: 'col-md-3 book_search_image' %>
         <%end%>
-        <%= book.title %>
-        <%= book.author %>
-        <%= form_with(model: @book, method: :post) do |f| %>
-          <%= f.hidden_field :title, value: book.title %>
-          <%= f.hidden_field :author, value: book.author %>
-          <%= f.hidden_field :image_url, value: book.image_url %>
-          <%= f.hidden_field :item_url, value: book.item_url %>
-          <%= f.submit '追加する', class: 'btn btn-primary' %>
-        <% end %>
+        <div class="book_infomation col-md-9">
+          <div class="book_title">
+            <%= book.title %>
+          </div>
+          <div class="book_author">
+            <%= book.author %>
+          </div>
+          
+          <%= form_with(model: @book, method: :post) do |f| %>
+            <%= f.hidden_field :title, value: book.title %>
+            <%= f.hidden_field :author, value: book.author %>
+            <%= f.hidden_field :image_url, value: book.image_url %>
+            <%= f.hidden_field :item_url, value: book.item_url %>
+            <%= f.submit '追加する', class: 'btn btn-primary add_btn' %>
+          <% end %>
+        </div>
+        
+        
+        
     </div>
   <% end %>
