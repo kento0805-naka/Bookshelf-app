@@ -1,3 +1,13 @@
-<% @books_rank.each do |book| %>
-  <li><%= book.title %></li>
-<% end %>
+<div　class='ranking_book_container'>
+  
+  <div class='ranking_book_title'>
+    読まれてる本ランキング
+  </div>
+  <hr>
+  <div class='ranking_result'>
+    <div class="ranking_book_list">
+      <%= render 'rank_book'%>
+    </div>
+    
+  </div>
+</div>
