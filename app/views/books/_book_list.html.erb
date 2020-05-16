@@ -16,7 +16,11 @@
             <%= f.hidden_field :author, value: book.author %>
             <%= f.hidden_field :image_url, value: book.image_url %>
             <%= f.hidden_field :item_url, value: book.item_url %>
-            <%= f.submit '追加する', class: 'btn btn-primary add_btn' %>
+            <% if current_user.books.find_by(item_url: book.item_url) %>
+              <button class='btn btn-danger add_btn'>追加済み</button>
+            <% else%>
+              <%= f.submit '追加する', class: 'btn btn-primary add_btn' %>
+            <% end %>
           <% end %>
         </div>
         
