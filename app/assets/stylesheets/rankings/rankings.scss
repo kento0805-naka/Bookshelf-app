@@ -8,59 +8,76 @@
 .ranking_book_title {
     text-align: center;
     margin-top: 100px;
+    font-size: 30px;
+    font-weight: 500;
   }
 
 .ranking_result {
     width: 100%;
+    margin-top: 60px;
     
     .ranking_book_list {
       width: 80%;
       margin: 10px auto;
-      .list {
-        margin: 20px auto;
-        width: 800px;
-        height: 259px;
-        border: 1px solid black;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-        border-radius: 10px;
+      
+      .ranking_book_box {
+        width: 100%;
         
-        .book_search_image {
-          width: 100px;
-          height: 90%px;
-          display: inline-block;
-          margin-top: 10px;
-          margin-bottom: 10px;
+        & h1 {
+          width: 90px;
+          height: 30px;
+          margin-top: 90px;
           
-          
-          & img {
-            max-width: 100%;
-	          height: 100%;
-            overflow: hidden;
-          }
         }
         
-        .book_infomation {
+        
+        .list {
+          margin: 20px auto;
+          width: 800px;
+          height: 259px;
+          border: 1px solid black;
+          box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+          border-radius: 10px;
           
-          .book_title {
-            height : 33%;
-            font-size: 24px;
-            text-align: left;
-            font-weight: 500;
-            padding-top: 10px;
-            text-decoration: underline;
+          .book_search_image {
+            width: 100px;
+            height: 90%px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            
+            & img {
+              max-width: 100%;
+  	          height: 100%;
+              overflow: hidden;
+            }
           }
           
-          .book_author {
-            height : 43%;
-            text-align: end;
-            padding-top: 70px;
-          }
-          
-          .add_btn {
-            height : 23%;
-            margin-left: 400px;
+          .book_infomation {
+            
+            .book_title {
+              height : 33%;
+              font-size: 24px;
+              text-align: left;
+              font-weight: 500;
+              padding-top: 10px;
+              text-decoration: underline;
+            }
+            
+            .book_author {
+              height : 43%;
+              text-align: end;
+              padding-top: 70px;
+            }
+            
+            .add_btn {
+              height : 23%;
+              margin-left: 400px;
+            }
           }
         }
       }
+      
     }
   }

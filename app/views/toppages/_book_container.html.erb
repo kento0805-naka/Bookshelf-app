@@ -1,0 +1,13 @@
+<div class='user_container row'>
+  <% books.each do |book| %>
+    
+      <div class='col-md-3 user_box'>
+        <div class='book_info_img'>
+          <%= image_tag book.image_url %>
+        </div>
+        <h5 class='pt-4'><%= book.title %></h5>
+      </div>
+      
+   
+  <% end %>
+</div>

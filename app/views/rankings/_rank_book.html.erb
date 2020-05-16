@@ -1,4 +1,7 @@
+  <% i = 1%>
   <% @books_rank.each do |book| %>
+  <div class='ranking_book_box d-md-flex'>
+    <h1 class=''><%= i %>位</h1>
     <div class="list row">
         <% if book.image_url %>
           <%= link_to (image_tag(book.image_url)), book.item_url, class: 'col-md-3 book_search_image' %>
@@ -10,11 +13,9 @@
           <div class="book_author">
             <%= book.author %>
           </div>
-          
-        
         </div>
-        
-        
-        
+        <% i += 1 %>
     </div>
+  </div>
+    
   <% end %>
