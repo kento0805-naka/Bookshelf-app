@@ -3,7 +3,11 @@
     
       <div class='col-md-3 user_box'>
         <div class='user_info_img'>
-          <%= render 'users/user_image', user: user%>
+          <% if user.profile_img? %>
+            <%= link_to (image_tag(user.profile_img.thumb.url)), user_path(user.id)%>
+          <% else %>
+            <i class="far fa-user-circle "></i>
+          <% end %>
         </div>
         <h5><%= user.name %></h5>
       </div>

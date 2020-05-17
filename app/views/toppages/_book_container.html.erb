@@ -3,7 +3,7 @@
     
       <div class='col-md-3 user_box'>
         <div class='book_info_img'>
-          <%= image_tag book.image_url %>
+          <%= link_to (image_tag(book.image_url)), book_path(book.id) %>
         </div>
         <h5 class='pt-4'><%= book.title %></h5>
       </div>
