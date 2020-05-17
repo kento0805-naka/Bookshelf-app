@@ -2,10 +2,27 @@
 <div class='container'>
   <div class='book_page'>
     <div class='book_summary'>
-      <div class="book_container">
-        <%= @book.title %>
+      <div class="book_container_show d-md-flex">
+        <div class="book_image">
+          <%= image_tag @book.image_url %>
+        </div>
+        <div class="book_info">
+          <div class="book_title">
+            <%= @book.title %>
+          </div>
+          <div>著者</div>
+          <div class="book_author">
+            <%= @book.author %>
+          </div>
+        </div>
       </div>
-      <div class="buttons"></div>
+      <div class="buttons">
+        <% if current_user.registered_book?(@book) %>
+          <button type='button' class='btn btn-primary'>読書中</button>
+        <% else %>
+          <button type='button' class='btn btn-primary'>本棚に追加</button>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
