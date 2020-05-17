@@ -2,7 +2,7 @@
   <% all_books.each do |book| %>
     <div class='book_item list_item'>
       <figure class='book_image book_item_image'>
-        <%= image_tag book.image_url%>
+        <%= link_to (image_tag(book.image_url)), book_path(book.id) %>
       </figure>
     </div>
   <% end %>
