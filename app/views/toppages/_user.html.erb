@@ -1,12 +1,13 @@
 <div class='user_container row'>
   <% users.each do |user| %>
     
-      <div class='col-md-3 user_box'>
+      <div class='col-sm-6 col-md-4 col-lg-3 user_box'>
         <div class='user_info_img'>
           <% if user.profile_img? %>
             <%= link_to (image_tag(user.profile_img.thumb.url)), user_path(user.id)%>
           <% else %>
-            <i class="far fa-user-circle "></i>
+
+            <%= link_to "\uf2bd", user_path(user.id), class: 'far fa-user-circle user_icon'%>
           <% end %>
         </div>
         <h5><%= user.name %></h5>

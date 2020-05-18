@@ -1,5 +1,26 @@
-<% @users.each do |user| %>
-  <ul>
-    <li><%= link_to user.name, user_path(user) %></li>
-  </ul>
-<% end %>
+<div class='users_page'>
+  <div>
+    <div class='new_user'>新着ユーザー</div>
+    <hr></hr>
+    <div class='user_content'>
+      <div class='user_box'>
+        <div class='user_container row'>
+          <% @users.each do |user| %>
+            
+              <div class='col-lg-3 col-md-4 user_box'>
+                <div class='user_info_img'>
+                  <% if user.profile_img? %>
+                    <%= link_to (image_tag(user.profile_img.thumb.url)), user_path(user.id)%>
+                  <% else %>
+                    <%= link_to "\uf2bd", user_path(user.id), class: 'far fa-user-circle user_icon'%>
+                  <% end %>
+                </div>
+                <h5><%= user.name %></h5>
+              </div>
+              
+           
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

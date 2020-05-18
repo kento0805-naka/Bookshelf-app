@@ -1,0 +1,30 @@
+$cblack: #1f1e1e;
+
+
+.new_user {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 23px;
+  font-weight: 500;
+  ;
+}
+
+
+.user_info_img {
+  
+  .user_icon {
+    font-size: 206px;
+    
+    &:hover {
+      color: $cblack;
+    }
+    
+    &:link {
+      color: $cblack;
+    }
+    
+    &:visited {
+      color: $cblack;
+    }
+  }
+}
