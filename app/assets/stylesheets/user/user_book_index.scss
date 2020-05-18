@@ -1,0 +1,27 @@
+
+.book_content {
+  padding-top: 20px;
+  .book_boxs {
+    
+    .book_container_index {
+      width: 90%;
+      margin: 0 auto;
+      .book_box {
+        margin-bottom: 20px;
+        
+        .book_info_img {
+          
+          & img {
+            
+            
+          }
+        }
+        
+        & h5 {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
