@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :books, only: [:index, :show, :create, :new] do
-    # collection do
-    #   get :search
-    # end
+  resources :books, only: [:index, :show, :create, :new, :update, :destroy] do
+    member do
+      post :add
+    end
   end
   resources :relationships, only: [:create, :destroy]
   resources :rankings, only: [:index]

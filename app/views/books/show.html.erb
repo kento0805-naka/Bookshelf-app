@@ -14,13 +14,19 @@
           <div class="book_author">
             <%= @book.author %>
           </div>
+          <div>ステータス：<%= render 'status' %></div>
+          
         </div>
       </div>
       <div class="buttons">
         <% if current_user.registered_book?(@book) %>
-          <button type='button' class='btn btn-primary'>読書中</button>
+          <%= render 'status_button' %>
+          <%= render 'delete_button' %>
         <% else %>
-          <button type='button' class='btn btn-primary'>本棚に追加</button>
+          <%= form_with(url: add_book_path, local: true, method: :post) do |f|%>
+            <%= f.hidden_field :id, :value => @book.id %>
+            <%= f.submit '本棚に追加', class: 'btn btn-primary' %>
+          <% end %>  
         <% end %>
       </div>
     </div>

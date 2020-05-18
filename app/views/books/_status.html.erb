@@ -1,0 +1,8 @@
+
+<% if current_user.registered_book?(@book) && @status_book.status == 1 %>
+  <p>読書中</p>
+<% elsif current_user.registered_book?(@book) && @status_book.status == 2 %>
+  <p>読了</p>
+<% else %>
+  <p>未登録</p>
+<% end %>

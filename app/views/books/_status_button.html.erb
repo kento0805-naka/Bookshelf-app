@@ -1,0 +1,9 @@
+
+<%= form_with(model: @book, lacal: true, method: :patch) do |f| %>
+  <%= f.hidden_field :id, :value => @book.id %>
+  <% if @status_book.status == 1 %>
+    <%= f.submit '読了に変更', class: 'btn btn-primary'%>
+  <% elsif @status_book.status == 2 %>
+    <%= f.submit '読書中に変更', class: 'btn btn-primary'%>
+  <% end %>
+<% end %>
