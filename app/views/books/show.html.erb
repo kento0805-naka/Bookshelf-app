@@ -18,14 +18,14 @@
           
         </div>
       </div>
-      <div class="buttons">
+      <div class="buttons d-md-flex justify-content-end">
         <% if current_user.registered_book?(@book) %>
           <%= render 'status_button' %>
           <%= render 'delete_button' %>
         <% else %>
           <%= form_with(url: add_book_path, local: true, method: :post) do |f|%>
             <%= f.hidden_field :id, :value => @book.id %>
-            <%= f.submit '本棚に追加', class: 'btn btn-primary' %>
+            <%= f.submit '本棚に追加', class: 'btn btn-primary add' %>
           <% end %>  
         <% end %>
       </div>

@@ -5,7 +5,7 @@
   .book_page {
     
     .book_summary {
-      background-color: red;
+      // background-color: red;
       width: 600px;
       height: 333px;
       margin: 5rem auto;
@@ -50,6 +50,17 @@
       
       .buttons {
         
+        .status {
+          margin-right: 10px;
+        }
+        
+        .delete {
+          margin-right: 10px;
+        }
+        
+        .add {
+          margin-right: 30px;
+        }
       }
     }
   }

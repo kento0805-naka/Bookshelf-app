@@ -1,6 +1,6 @@
 <% if current_user.registered_book?(@book) %>
   <%= form_with(model: @book, local: true, method: :delete) do |f| %>
     <%= f.hidden_field :id, :value => @book.id %>
-    <%= f.submit '本棚から削除', class: 'btn btn-danger'%>
+    <%= f.submit '本棚から削除', class: 'btn btn-danger delete'%>
   <% end %>
 <% end %>
