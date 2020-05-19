@@ -32,7 +32,8 @@ class User < ApplicationRecord
   
   has_many :userbooks
   has_many :books, through: :userbooks, source: :book
-  
+  has_many :reading_book, -> { where "status = 1"}, through: :userbooks, source: :book
+  has_many :have_read_book, -> { where "status = 2"}, through: :userbooks, source: :book
          
          
   validates :name, presence: true
@@ -54,6 +55,7 @@ class User < ApplicationRecord
   def following?(other_user)
     self.followings.include?(other_user)
   end
+  
   
   
   

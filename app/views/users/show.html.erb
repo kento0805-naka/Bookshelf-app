@@ -1,7 +1,14 @@
 <%= render 'show_top_wrapper', user: @user %>
 
 <hr>
-
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">読書中</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">読了</a>
+  </li>
+</ul>
 <div class="register_books">
  <%= render 'show_book_wrapper', all_books: @all_books %>
 </div>
