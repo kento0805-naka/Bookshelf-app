@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     counts(@user)
     @all_books = @user.books.all
+    @reading_book = @user.reading_book.all
+    
   end
   
   def edit
@@ -37,6 +39,12 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
+  
+  def read  
+    @user = User.find_by(id: params[:id])
+    counts(@user)
+    @have_read_book = @user.have_read_book.all
+  end
   private
   
   def user_params
