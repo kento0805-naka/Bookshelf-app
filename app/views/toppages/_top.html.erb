@@ -1,5 +1,8 @@
 <div class='top-wrapper'>
+  <div class='concept'>
+    Design your Bookshelf
+  </div>
   <% unless user_signed_in? %>
-  <%= link_to 'ログインする', new_user_session_path, class: 'btn btn-primary login-btn'%>
+    <%= link_to 'ログインする', new_user_session_path, class: 'btn btn-primary login-btn'%>
   <% end %>
 </div>

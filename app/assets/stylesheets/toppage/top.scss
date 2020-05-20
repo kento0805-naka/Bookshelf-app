@@ -33,6 +33,19 @@ body {
       content: ' ';
     }
     
+    .concept {
+      font-size: 45px;
+      color: #fff;
+      position: relative;
+      z-index: 20;
+      top: 38%;
+      left: 32%;
+      font-weight: 600;
+      letter-spacing: 2px;
+      opacity: .9;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    
     .login-btn {
       position: absolute;
       top: 70%;
