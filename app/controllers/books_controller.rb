@@ -16,14 +16,15 @@ class BooksController < ApplicationController
     @books = []
     return unless params.key?(:title)
       
-    if params[:title].present?
+    if params[:title].present? && params[:title].size > 1
       results = RakutenWebService::Books::Book.search(title: params[:title])
       
       results.each do |result|
         book = Book.find_or_initialize_by(read(result))
         @books << book
      end
-      
+    elsif params[:title].present? && params[:title].size == 1
+      flash.now[:notice] = 'キーワードは2文字以上入力してください'
     else
       flash.now[:notice] = 'キーワードを入力してください'
     end

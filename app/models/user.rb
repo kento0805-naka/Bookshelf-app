@@ -37,7 +37,7 @@ class User < ApplicationRecord
          
          
   validates :name, presence: true
-  # validates :description, length: { maximum: 200 }
+  validates :description, length: { maximum: 140 }
   
   mount_uploader :profile_img, ImageUploader
   
