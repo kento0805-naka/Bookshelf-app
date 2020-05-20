@@ -84,3 +84,26 @@
 .register_books {
   width: 100%;
 }
+.nav-pills {
+  border-bottom: 1px solid;
+  border-color: #dad9d9;
+  
+  
+  .nav-item {
+    margin-bottom: 10px;
+    
+    .nav-reading {
+      margin-right: 130px;
+    }
+    
+    .nav-read {
+      
+    }
+    .nav-link {
+      
+        &:active {
+         border-radius: 20px;
+      }
+    }
+  }
+}
