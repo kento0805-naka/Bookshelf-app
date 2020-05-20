@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:update, :destroy, :add, :add_read]
-  
+
   def index
     @books = Book.all.order(id: 'desc').limit(20)
   end
@@ -56,6 +55,7 @@ class BooksController < ApplicationController
   end
   
   def update
+    book = Book.find(params[:id])
     userbook = current_user.userbooks.find_by(book_id: book.id)
     
     if userbook.status == 1
@@ -81,6 +81,7 @@ class BooksController < ApplicationController
   end
   
   def destroy
+    book = Book.find(params[:id])
     userbook = current_user.userbooks.find_by(book_id: book.id)
     
     if userbook.delete
@@ -93,6 +94,7 @@ class BooksController < ApplicationController
   end
   
   def add
+    book = Book.find(params[:id])
     if current_user.register_book(book)
       flash[:success] = '本棚に追加しました'
       redirect_back(fallback_location: root_path)
