@@ -1,8 +1,8 @@
 
 <% if current_user.registered_book?(@book) && @status_book.status == 1 %>
-  <p>読書中</p>
+  <span class='badge badge-info'>読書中</span>
 <% elsif current_user.registered_book?(@book) && @status_book.status == 2 %>
-  <p>読了</p>
+  <span class='badge badge-success'>読了</span>
 <% else %>
-  <p>未登録</p>
+  <span class='badge badge-secondary'>未登録</span>
 <% end %>
