@@ -6,7 +6,7 @@
     <div class="search-box">
       <%= form_with(url: new_book_path, method: :get, local: true) do |f|%>
         <div class='form-group'>
-          <%= f.text_field :title, class: 'form' %>
+          <%= f.text_field :title, class: 'form', placeholder: '　本のタイトル' %>
           <%= f.submit "\uf002", class: 'form-btn btn btn-primary fa' %>
         </div>
       <% end %>

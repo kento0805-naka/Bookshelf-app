@@ -9,4 +9,6 @@ class ApplicationRecord < ActiveRecord::Base
     self.books.include?(book)
   end
   
+  
+  
 end

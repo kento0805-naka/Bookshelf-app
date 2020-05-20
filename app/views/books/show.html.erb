@@ -4,7 +4,7 @@
     <div class='book_summary'>
       <div class="book_container_show d-md-flex">
         <div class="book_image">
-          <%= image_tag @book.image_url %>
+          <%= link_to (image_tag(@book.image_url)), @book.item_url %>
         </div>
         <div class="book_info">
           <div class="book_title">

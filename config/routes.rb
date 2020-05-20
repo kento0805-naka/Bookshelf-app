@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :books, only: [:index, :show, :create, :new, :update, :destroy] do
     member do
       post :add
+      post :add_read
     end
   end
   resources :relationships, only: [:create, :destroy]

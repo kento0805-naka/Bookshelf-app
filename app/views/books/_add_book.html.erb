@@ -6,6 +6,6 @@
   <% if current_user.books.find_by(item_url: book.item_url) %>
     <button class='btn btn-danger add_btn'>追加済み</button>
   <% else%>
-    <%= f.submit '読書中として登録', class: 'btn btn-primary add_btn' %>
+    <%= f.submit '本棚に追加', class: 'btn btn-primary add_btn' %>
   <% end %>
 <% end %>

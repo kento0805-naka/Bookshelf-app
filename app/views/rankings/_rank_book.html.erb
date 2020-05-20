@@ -4,7 +4,7 @@
     <h1 class=''><%= i %>位</h1>
     <div class="list row">
         <% if book.image_url %>
-          <%= link_to (image_tag(book.image_url)), book.item_url, class: 'col-md-3 book_search_image' %>
+          <%= link_to (image_tag(book.image_url)), book_path(book.id), class: 'col-md-3 book_search_image' %>
         <%end%>
         <div class="book_infomation col-md-9">
           <div class="book_title">
@@ -13,6 +13,7 @@
           <div class="book_author">
             <%= book.author %>
           </div>
+          
         </div>
         <% i += 1 %>
     </div>
