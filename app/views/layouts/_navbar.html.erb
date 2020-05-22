@@ -5,7 +5,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <% if user_signed_in? %>
-      <ul class="navbar-nav after-login">
+      <ul class="navbar-nav after-login d-flex justify-content-end pr-4">
         <li class="nav-item pt-1">
           <%= link_to "\uf015 マイページ", user_path(current_user), class: 'fa nav-link' %>
         </li>
