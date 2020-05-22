@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :correct_user, only: [:edit, :update]
   
   def index
     @users = User.all.order(id: 'desc').limit(20)
@@ -49,6 +50,11 @@ class UsersController < ApplicationController
   
   def user_params
     params.require(:user).permit(:profile_img, :description)
+  end
+  
+  def correct_user
+    @user = User.find_by(id: params[:id])
+    redirect_to root_path unless @user == current_user
   end
   
   
