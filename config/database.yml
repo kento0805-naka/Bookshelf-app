@@ -51,6 +51,6 @@ production:
   adapter: mysql2
   encoding: unicode
   pool: 5
-  database: message-board_production
-  username: message-board
+  database: booklist
+  username: root
   password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
