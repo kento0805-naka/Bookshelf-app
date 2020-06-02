@@ -2,16 +2,23 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   it "名前とメールアドレスとパスワードがあれば登録できる" do
+    expect(FactoryBot.create(:user)).to be_valid
+  end
   
-    user = User.new(
-      id: 1,
-      name: 'kento',
-      email: 'example@gmail.com',
-      password: 'password',
-      created_at: '2020-05-12 11:35:55',
-      updated_at: '2020-05-12 11:35:55'
-      )
-    
-    expect(user).to be_valid
+  it "名前がなければ登録できない" do
+    expect(FactoryBot.build(:user, name: "")).to_not be_valid
+  end
+  
+  it "メールアドレスがなければ登録できない" do
+    expect(FactoryBot.build(:user, email: "")).to_not be_valid
+  end
+  
+  it "メールアドレスが重複していたら登録できない" do
+    user1 = FactoryBot.create(:user, name: "kento", email: "user1@example.com")
+    expect(FactoryBot.build(:user, name: "taro", email: user1.email)).to_not be_valid
+  end
+  
+  it "パスワードがなければ登録できない" do
+    expect(FactoryBot.build(:user, password: "")).to_not be_valid
   end
 end
