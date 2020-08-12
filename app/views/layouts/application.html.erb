@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>BooklistApp</title>
+    <meta name="viewport" content="width=1024" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,13 +15,15 @@
   </head>
   
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= render 'layouts/flash' %>
-    <div class='container-fluid'>
-      <%= yield %>
+    <div class="wrap">
+      <%= render 'layouts/navbar' %>
+      <%= render 'layouts/flash' %>
+      <div class='container-fluid'>
+        <%= yield %>
+      </div>
+      <footer id='footer'>
+        <small>&copy; 2020 Bookself </small>
+      </footer>
     </div>
-    <footer id='footer'>
-      <small>&copy; 2020 Bookself </small>
-    </footer>
   </body>
 </html>

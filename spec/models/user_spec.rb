@@ -15,6 +15,7 @@ RSpec.describe User, type: :model do
   
   it "メールアドレスが重複していたら登録できない" do
     user1 = FactoryBot.create(:user, name: "kento", email: "user1@example.com")
+    user1.save!
     expect(FactoryBot.build(:user, name: "taro", email: user1.email)).to_not be_valid
   end
   

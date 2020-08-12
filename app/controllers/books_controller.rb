@@ -104,32 +104,6 @@ class BooksController < ApplicationController
     end
   end
  
-# def add_read
-#   　@title = params[:book][:title]
-#     @author = params[:book][:author]
-#     @image_url = params[:book][:image_url]
-#     @item_url = params[:book][:item_url]
-    
-#     book = Book.find_or_initialize_by({
-#       title: @title,
-#       author: @author,
-#       image_url: @image_url,
-#       item_url: @item_url
-#     })
-    
-#     if book.persisted?
-#       book_data = Book.find_by(item_url: book.item_url)
-#       current_user.register_book(book_data)
-#       redirect_to user_path(current_user.id)
-#     else
-#       book.save
-#       current_user.register_book(book)
-#       redirect_to user_path(current_user.id)
-#     end
-    
-    
-# end
-  
   private
   
   def set_book
