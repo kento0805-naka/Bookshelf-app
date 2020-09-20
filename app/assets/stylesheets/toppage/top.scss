@@ -1,77 +1,83 @@
-.flash {
-  position: absolute;
-  width: 100%;
-}
 
-body {
-  background-color: antiquewhite;
-}
-.wrap {
-  overflow: hidden;
-}
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
-  position: relative;
-}
+
+// body {
+//   background-color: antiquewhite;
+// }
+// .wrap {
+//   overflow: hidden;
+// }
+// .container-fluid {
+//   padding-right: 0;
+//   padding-left: 0;
+//   width: 100%;
+//   position: relative;
+// }
+
+// .top-wrapper {
+//     width: 100%;
+//     height: 50vh;
+//     background-image: image-url("bookshelf");
+//     background-size: cover;
+//     background-position: top;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     position: relative;
+    
+    // &::before {
+    //   background-color: rgba(0,0,0,0.3);
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   content: ' ';
+    // }
+    
+//     .concept {
+//       font-size: 45px;
+//       color: #fff;
+//       position: relative;
+//       z-index: 20;
+//       top: 38%;
+//       left: 32%;
+//       font-weight: 600;
+//       letter-spacing: 2px;
+//       opacity: .9;
+//       font-family: 'Balsamiq Sans', cursive;
+//     }
+    
+//     .login-btn {
+//       position: absolute;
+//       top: 70%;
+//       left: 45%;
+//       opacity: .9;
+//     }
+// }
+
+// .new_user_container {
+//   margin-top: 100px;
+  
+//   & h4 {
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif;
+//   }
+// }
+
+// .new_register_book {
+//   margin-top: 100px;
+  
+//   & h4 {
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif;
+//   }
+// }
 
 .top-wrapper {
+  width: 100%;
+  height: 20em;
+  
+  img {
     width: 100%;
-    height: 50vh;
-    background-image: image-url("books-1614215_1920");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    
-    &::before {
-      background-color: rgba(0,0,0,0.3);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: ' ';
-    }
-    
-    .concept {
-      font-size: 45px;
-      color: #fff;
-      position: relative;
-      z-index: 20;
-      top: 38%;
-      left: 32%;
-      font-weight: 600;
-      letter-spacing: 2px;
-      opacity: .9;
-      font-family: 'Balsamiq Sans', cursive;
-    }
-    
-    .login-btn {
-      position: absolute;
-      top: 70%;
-      left: 45%;
-      opacity: .9;
-    }
-}
-
-.new_user_container {
-  margin-top: 100px;
-  
-  & h4 {
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
+    height: 100%;
   }
 }
-
-.new_register_book {
-  margin-top: 100px;
-  
-  & h4 {
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
-  }
-}
-
