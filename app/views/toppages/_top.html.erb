@@ -1,12 +1,10 @@
 
 
-<div class='top-wrapper row'>
-  <div id='top-wrapper-image' class='col-lg-6 col-sm-12'>
-    <%= image_tag 'bookshelf.png' %>
-  </div>
-  <div class="col-lg-6 col-sm-12">
-    <% unless user_signed_in? %>
-      <%= link_to 'ログインする', new_user_session_path, class: 'btn btn-primary login-btn'%>
+<div class='top-wrapper col'>
+  <div id="header-title-box">&nbsp;Design<br>&nbsp;Your<br>&nbsp;Bookshelf</div>
+  <div id='header-login-box'>
+    <%= link_to new_user_session_path, class: 'btn', id: 'header-login-btn' do %>
+      <span>Login</span>
     <% end %>
   </div>
 </div>

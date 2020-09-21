@@ -72,12 +72,95 @@
 //   }
 // }
 
-.top-wrapper {
+header {
   width: 100%;
-  height: 20em;
+  height: 92vh;
+  margin: 0 auto 10%;
   
-  img {
+  .top-wrapper {
     width: 100%;
     height: 100%;
+    background-image: image-url("book");
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+    position: relative;
+    
+    &::before {
+      background-color: rgba(0,0,0,0.2);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: ' ';
+    }
+    
+    #header-title-box {
+      background-color: #dc3545bf;
+      width: 80%;
+      height: 25%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 6.5rem;
+      color: white;
+      text-shadow: 0 2px #000;
+    }
+    
+    #header-login-box {
+      width: 80%;
+      height: 25%;
+      background-color: #dc3545bf;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      
+      #header-login-btn {
+        font-size: 4rem;
+        color: white;
+        text-shadow: 0 2px #000;
+        position: absolute;
+        bottom: 8%;
+        right: 10%;
+        border: 5px solid white;
+        border-radius: 20px;
+        // border-top: 5px solid white;
+        overflow: hidden;
+        
+        span {
+          position: relative;
+        }
+        
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -10px;
+          width: 100%;
+          height: 100%;
+          content: '';
+          transition: all .5s ease-in-out;
+          transform: translateX(-96%);
+          background: #93b6bf;
+        }
+        &:hover:before {
+            transform: translateX(6%);
+          }
+        &:hover {
+          text-shadow: 2px 4px #000;
+        }
+      }
+    }
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  #header-title-box {
+    font-size: 4rem !important;
+  }
+  #header-login-btn {
+    font-size: 3rem !important;
+  }
+}
+
