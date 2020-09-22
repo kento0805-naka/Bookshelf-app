@@ -34,6 +34,10 @@ header {
       font-size: 6.5rem;
       color: white;
       text-shadow: 0 2px #000;
+      
+      span {
+        display: none;
+      }
     }
     
     #header-login-box {
