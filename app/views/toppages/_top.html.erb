@@ -1,10 +1,12 @@
 
 
 <div class='top-wrapper col'>
-  <div id="header-title-box">&nbsp;Design<br>&nbsp;Your<br>&nbsp;Bookshelf</div>
+  <div id="header-title-box"><span id='header-title'>&nbsp;Design<br>&nbsp;Your<br>&nbsp;Bookshelf</span></div>
   <div id='header-login-box'>
-    <%= link_to new_user_session_path, class: 'btn', id: 'header-login-btn' do %>
-      <span>Login</span>
+    <% unless user_signed_in? %>
+      <%= link_to new_user_session_path, class: 'btn', id: 'header-login-btn' do %>
+        <span>Login</span>
+      <% end %>
     <% end %>
   </div>
 </div>

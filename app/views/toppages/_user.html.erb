@@ -1,19 +1,15 @@
 <div class='user_container row'>
   <% users.each do |user| %>
-    
-      <div class='col-sm-6 col-md-4 col-lg-3 user_box'>
-        <div class='user_info_img'>
+      <div class='user_box col-lg-2 offset-lg-1 col-md-5 offset-md-1 col-sm-12'>
+        <div class="top-user-image-box">
           <% if user.profile_img? %>
-            <%= link_to (image_tag(user.profile_img.thumb.url)), user_path(user.id)%>
+            <%= link_to (image_tag(user.profile_img.thumb.url)), user_path(user.id), class: 'top-user-image'%>
           <% else %>
-
-            <%= link_to "\uf2bd", user_path(user.id), class: 'far fa-user-circle user_icon'%>
+            <%= link_to "\uf2bd", user_path(user.id), class: 'far fa-user-circle', id: 'user-icon'%>
           <% end %>
         </div>
-        <h5><%= user.name %></h5>
+        <h5 id='top-user-name'><%= user.name %></h5>
       </div>
-      
-   
   <% end %>
 </div>
 <%= render 'search_more' %>

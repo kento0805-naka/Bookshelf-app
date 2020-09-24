@@ -1,4 +1,4 @@
-
+@import '../colors';
 
 // .user_container {
 //   margin: 30px 50px;
@@ -26,3 +26,46 @@
     
 //   }
 // }
+
+.new_user_container {
+  
+  .user_container {
+    background-color: $middle-blue;
+    margin: 0 auto;
+    
+    .user_box {
+      background-color: white;
+      margin: 20px auto;
+      width: auto;
+      height: 300px;
+      border: 2px solid blue;
+      border-radius: 15px;
+      padding: 20px 20px;
+      
+      .top-user-image-box {
+        text-align: center;
+        .top-user-image {
+          display: inline-block;
+          
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+        }
+        #user-icon {
+            width: 150px;
+            height: 150px;
+            font-size: 9.7rem;
+            overflow: hidden;
+          }
+      }
+      
+      #top-user-name {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      
+    }
+  }
+}
