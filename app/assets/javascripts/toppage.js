@@ -1,4 +1,4 @@
 
-$(document).ready(function() {
-  $('#header-title').fadeIn(1000);
-})
+// $(document).ready(function() {
+//   $('#header-title').fadeIn(1000);
+// })
