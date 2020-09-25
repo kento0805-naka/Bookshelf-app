@@ -1,4 +1,4 @@
-
+@import '../colors';
 
 // .book_info_img {
 //   width: 200px;
@@ -18,3 +18,36 @@
 //     font-family: 'Kosugi Maru', sans-serif;
 //   }
 // }
+
+.new_register_book {
+    margin-top: 7rem;
+    
+    .top-title {
+        background-color: $clear-red;
+        color: white;
+        text-shadow: 0 2px #000;
+        height: 1.8em;
+        width: 70%;
+        padding: 5px;
+        }
+    .book-container {
+        background-color: $light-blue;
+        
+        .user-box {
+            
+            .book-info-img {
+                text-align: center;
+                padding-top: 2rem;
+                img {
+                    width: 7rem;
+                    height: 10rem;
+                    transform: skewX(-2deg);
+                    box-shadow: 4px 2px 6px black;
+                }
+            }
+            .top-books-title {
+                text-align: center;
+            }
+        }
+    }
+}

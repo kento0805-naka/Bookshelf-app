@@ -4,7 +4,7 @@
 
 <main-content>
   <div class='new_user_container'>
-    <h4><i class="fas fa-users"></i>  新規登録ユーザー</h4>
+    <h4 id='top-user-title'><i class="fas fa-users"></i>  新規登録ユーザー</h4>
     <hr>
       <%= render 'user', users: @users %>
     <hr>
@@ -12,14 +12,14 @@
   
   
   <div class="new_register_book">
-    <h4><i class="fas fa-book"></i>  新規登録本</h4>
+    <h4 class="top-title"><i class="fas fa-book"></i>  新規登録本</h4>
     <hr>
       <%= render 'book', books: @books %>
     <hr>
   </div>
   
   <div class="new_register_book">
-    <h4><i class="fas fa-book"></i>  書籍登録数ランキング</h4>
+    <h4 class="top-title"><i class="fas fa-book"></i>  書籍登録数ランキング</h4>
     <hr>
       <%= render 'book_rank', books: @books_rank %>
     <hr>
