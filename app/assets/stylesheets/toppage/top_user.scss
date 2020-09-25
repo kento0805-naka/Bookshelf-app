@@ -79,3 +79,28 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .new_user_container {
+    .user_container {
+      
+      .user_box {
+        width: 10rem;
+        height: 14rem;
+        .top-user-image-box {
+          .top-user-image {
+            img {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          #user-icon {
+            width: 100px;
+            height: 100px;
+            font-size: 6.5rem;
+          }
+        }
+      }
+    }
+  }
+}
